@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Xamarin.Android Control Declaration in Fragment generator</Title>
+      <Shortcut>xacf</Shortcut>
+      <Description>
+        Xamarin.Android Control Declaration in Fragment
+      </Description>
+      <Author>Gilbok Lee</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ControlType</ID>
+          <ToolTip>Type of Control</ToolTip>
+          <Default>Button</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ControlName</ID>
+          <ToolTip>Name of Control</ToolTip>
+          <Default>MyButton</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+<![CDATA[
+        $ControlType$ $ControlName$;
+        $end$// Move code below into OnCreateView
+        $ControlName$ = view.FindViewById<$ControlType$>(Resource.Id.$ControlName$);
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
+
