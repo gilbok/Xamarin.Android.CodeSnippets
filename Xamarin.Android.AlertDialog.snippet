@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Xamarin.Android AlertDialog Declaration generator</Title>
+      <Shortcut>xaa</Shortcut>
+      <Description>
+        Xamarin.Android AlertDialog Declaration
+      </Description>
+      <Author>Gilbok Lee</Author>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>TempBuilder</ID>
+          <ToolTip>Temporary Variable for AlertDialog.Builder</ToolTip>
+          <Default>builder</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Message</ID>
+          <ToolTip>Alert Message</ToolTip>
+          <Default>Are you sure?</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>OKCaption</ID>
+          <ToolTip>Caption for PositiveButton</ToolTip>
+          <Default>OK</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>CancelCaption</ID>
+          <ToolTip>Caption for NegativeButton</ToolTip>
+          <Default>Cancel</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+      <![CDATA[var $TempBuilder$ = new AlertDialog.Builder(this);
+            $TempBuilder$.SetMessage("$Message$");
+            $TempBuilder$.SetPositiveButton("$OKCaption$", (s, e) => 
+            { 
+                $end$// If OK 
+            });
+            $TempBuilder$.SetNegativeButton("$CancelCaption$", (s, e) => 
+            {
+                // If Cancel
+            });
+            $TempBuilder$.Create().Show();
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
+
